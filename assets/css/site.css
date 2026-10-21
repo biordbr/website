@@ -823,21 +823,23 @@ html{scroll-behavior:smooth} img{max-width:100%} .reveal:not(.in){opacity:1;tran
   .btn {max-width:100%;white-space:normal;}
 }
 
-/* Submenus de Serviços e Restaurantes; o link principal continua navegável. */
+/* Submenus nativos: clique, toque e teclado sem depender do JavaScript. */
 .nav-group {position:relative;}
-.nav-parent {display:flex;align-items:center;gap:3px;}
-.submenu-toggle {display:inline-flex;align-items:center;justify-content:center;min-width:28px;min-height:32px;padding:0;background:transparent;color:var(--text-paper-60);font-size:18px;border-radius:6px;}
-.submenu-toggle:hover,.submenu-toggle[aria-expanded="true"] {color:var(--coral);background:rgba(255,255,255,.06);}
-.submenu-toggle[aria-expanded="true"] span {transform:rotate(180deg);}
-.nav-submenu {list-style:none;margin:0;padding:8px;min-width:210px;border:1px solid var(--ink-line);border-radius:12px;background:var(--ink-soft);box-shadow:0 14px 32px rgba(0,0,0,.22);}
-.nav-submenu[hidden] {display:none;}
+.nav-parent {display:flex;align-items:center;gap:8px;list-style:none;cursor:pointer;color:var(--text-paper-60);font-weight:600;min-height:40px;border-radius:8px;}
+.nav-parent::-webkit-details-marker {display:none;}
+.nav-parent::marker {content:"";}
+.nav-parent:hover,.nav-group[open] > .nav-parent,.nav-parent.active-parent {color:var(--coral);}
+.submenu-chevron {flex-shrink:0;transition:transform .2s ease;}
+.nav-group[open] > .nav-parent .submenu-chevron {transform:rotate(180deg);}
+.nav-submenu {list-style:none;margin:0;padding:8px;min-width:230px;border:1px solid var(--ink-line);border-radius:12px;background:var(--ink-soft);box-shadow:0 14px 32px rgba(0,0,0,.22);}
 .nav-links .nav-submenu {position:absolute;top:100%;left:0;z-index:110;}
-.nav-links .nav-submenu a {display:block;padding:11px 14px;border-radius:7px;font-size:13px;}
-.nav-submenu a:hover,.nav-submenu a:focus-visible {background:rgba(255,255,255,.06);}
-.nav-parent > a.active-parent {color:var(--coral);}
-.mobile-panel .nav-group {border-bottom:1px solid var(--ink-line);}
-.mobile-panel .nav-parent {justify-content:space-between;}
-.mobile-panel .nav-parent > a {flex:1;border-bottom:0;}
-.mobile-panel .submenu-toggle {min-width:44px;min-height:44px;}
-.mobile-panel .nav-submenu {min-width:0;box-shadow:none;margin-bottom:10px;padding:4px 12px;border:0;border-left:2px solid var(--coral);border-radius:0;}
+.nav-links .nav-parent {padding:0 10px;margin-inline:-10px;}
+.nav-links .nav-parent:hover,.nav-links .nav-group[open] > .nav-parent {background:rgba(255,255,255,.05);}
+.nav-links .nav-submenu a {display:block;padding:12px 14px;border-radius:7px;font-size:13px;}
+.nav-submenu a:hover,.nav-submenu a:focus-visible {background:rgba(255,255,255,.06);color:var(--text-paper);}
+.nav-submenu > li:first-child {border-bottom:1px solid var(--ink-line);margin-bottom:5px;padding-bottom:5px;}
+.mobile-panel > .nav-group {width:100%;border-bottom:1px solid var(--ink-line);}
+.mobile-panel .nav-parent {justify-content:space-between;width:100%;min-height:49px;padding:12px 4px;border-radius:0;font-size:15px;}
+.mobile-panel .submenu-chevron {width:28px;height:28px;padding:5px;border:1px solid var(--ink-line);border-radius:8px;background:rgba(255,255,255,.04);}
+.mobile-panel .nav-submenu {min-width:0;box-shadow:none;margin:0 0 12px;padding:6px 10px;border:1px solid var(--ink-line);border-radius:10px;}
 .mobile-panel .nav-submenu a {display:block;padding:12px;border-bottom:0;font-size:14px;}
