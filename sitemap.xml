@@ -1,2 +1,51 @@
-<?xml version='1.0' encoding='utf-8'?>
-<urlset xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://biord.com.br/pt/</loc><xhtml:link rel="alternate" hreflang="pt-BR" href="https://biord.com.br/pt/" /><xhtml:link rel="alternate" hreflang="en" href="https://biord.com.br/en/" /><xhtml:link rel="alternate" hreflang="es" href="https://biord.com.br/es/" /></url><url><loc>https://biord.com.br/pt/servicos/</loc><xhtml:link rel="alternate" hreflang="pt-BR" href="https://biord.com.br/pt/servicos/" /><xhtml:link rel="alternate" hreflang="en" href="https://biord.com.br/en/servicos/" /><xhtml:link rel="alternate" hreflang="es" href="https://biord.com.br/es/servicos/" /></url><url><loc>https://biord.com.br/pt/restaurantes/</loc><xhtml:link rel="alternate" hreflang="pt-BR" href="https://biord.com.br/pt/restaurantes/" /><xhtml:link rel="alternate" hreflang="en" href="https://biord.com.br/en/restaurantes/" /><xhtml:link rel="alternate" hreflang="es" href="https://biord.com.br/es/restaurantes/" /></url><url><loc>https://biord.com.br/pt/sobre/</loc><xhtml:link rel="alternate" hreflang="pt-BR" href="https://biord.com.br/pt/sobre/" /><xhtml:link rel="alternate" hreflang="en" href="https://biord.com.br/en/sobre/" /><xhtml:link rel="alternate" hreflang="es" href="https://biord.com.br/es/sobre/" /></url><url><loc>https://biord.com.br/en/</loc><xhtml:link rel="alternate" hreflang="pt-BR" href="https://biord.com.br/pt/" /><xhtml:link rel="alternate" hreflang="en" href="https://biord.com.br/en/" /><xhtml:link rel="alternate" hreflang="es" href="https://biord.com.br/es/" /></url><url><loc>https://biord.com.br/en/servicos/</loc><xhtml:link rel="alternate" hreflang="pt-BR" href="https://biord.com.br/pt/servicos/" /><xhtml:link rel="alternate" hreflang="en" href="https://biord.com.br/en/servicos/" /><xhtml:link rel="alternate" hreflang="es" href="https://biord.com.br/es/servicos/" /></url><url><loc>https://biord.com.br/en/restaurantes/</loc><xhtml:link rel="alternate" hreflang="pt-BR" href="https://biord.com.br/pt/restaurantes/" /><xhtml:link rel="alternate" hreflang="en" href="https://biord.com.br/en/restaurantes/" /><xhtml:link rel="alternate" hreflang="es" href="https://biord.com.br/es/restaurantes/" /></url><url><loc>https://biord.com.br/en/sobre/</loc><xhtml:link rel="alternate" hreflang="pt-BR" href="https://biord.com.br/pt/sobre/" /><xhtml:link rel="alternate" hreflang="en" href="https://biord.com.br/en/sobre/" /><xhtml:link rel="alternate" hreflang="es" href="https://biord.com.br/es/sobre/" /></url><url><loc>https://biord.com.br/es/</loc><xhtml:link rel="alternate" hreflang="pt-BR" href="https://biord.com.br/pt/" /><xhtml:link rel="alternate" hreflang="en" href="https://biord.com.br/en/" /><xhtml:link rel="alternate" hreflang="es" href="https://biord.com.br/es/" /></url><url><loc>https://biord.com.br/es/servicos/</loc><xhtml:link rel="alternate" hreflang="pt-BR" href="https://biord.com.br/pt/servicos/" /><xhtml:link rel="alternate" hreflang="en" href="https://biord.com.br/en/servicos/" /><xhtml:link rel="alternate" hreflang="es" href="https://biord.com.br/es/servicos/" /></url><url><loc>https://biord.com.br/es/restaurantes/</loc><xhtml:link rel="alternate" hreflang="pt-BR" href="https://biord.com.br/pt/restaurantes/" /><xhtml:link rel="alternate" hreflang="en" href="https://biord.com.br/en/restaurantes/" /><xhtml:link rel="alternate" hreflang="es" href="https://biord.com.br/es/restaurantes/" /></url><url><loc>https://biord.com.br/es/sobre/</loc><xhtml:link rel="alternate" hreflang="pt-BR" href="https://biord.com.br/pt/sobre/" /><xhtml:link rel="alternate" hreflang="en" href="https://biord.com.br/en/sobre/" /><xhtml:link rel="alternate" hreflang="es" href="https://biord.com.br/es/sobre/" /></url></urlset>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://biord.com.br/pt/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://biord.com.br/pt/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://biord.com.br/en/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://biord.com.br/es/" />
+  </url>
+  <url>
+    <loc>https://biord.com.br/en/sourcing/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://biord.com.br/pt/fornecimento-uco/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://biord.com.br/en/sourcing/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://biord.com.br/es/fornecimiento-uco/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://biord.com.br/en/sourcing/" />
+  </url>
+  <url>
+    <loc>https://biord.com.br/pt/fornecimento-uco/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://biord.com.br/pt/fornecimento-uco/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://biord.com.br/en/sourcing/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://biord.com.br/es/fornecimiento-uco/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://biord.com.br/en/sourcing/" />
+  </url>
+  <url>
+    <loc>https://biord.com.br/es/fornecimiento-uco/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://biord.com.br/pt/fornecimento-uco/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://biord.com.br/en/sourcing/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://biord.com.br/es/fornecimiento-uco/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://biord.com.br/en/sourcing/" />
+  </url>
+  <url>
+    <loc>https://biord.com.br/en/operating-solutions/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://biord.com.br/pt/solucoes-operacionais/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://biord.com.br/en/operating-solutions/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://biord.com.br/es/soluciones-operativas/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://biord.com.br/en/operating-solutions/" />
+  </url>
+  <url>
+    <loc>https://biord.com.br/pt/solucoes-operacionais/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://biord.com.br/pt/solucoes-operacionais/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://biord.com.br/en/operating-solutions/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://biord.com.br/es/soluciones-operativas/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://biord.com.br/en/operating-solutions/" />
+  </url>
+  <url>
+    <loc>https://biord.com.br/es/soluciones-operativas/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://biord.com.br/pt/solucoes-operacionais/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://biord.com.br/en/operating-solutions/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://biord.com.br/es/soluciones-operativas/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://biord.com.br/en/operating-solutions/" />
+  </url>
+</urlset>
