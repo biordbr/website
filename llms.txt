@@ -1,0 +1,22 @@
+# Biord — UCO traceability and marketplace
+
+> Biord is a Brazilian technology company building digital provenance infrastructure and marketplace capabilities for used cooking oil (UCO).
+
+## About
+Biord connects generators, collection partners, aggregation facilities and buyers. Its platform captures geolocation, photographic evidence, timestamps, origin confirmations, batch movements and quantitative reconciliation. For generators, Biord offers commercial channels and, where available, responsible-disposal incentives.
+
+## Technology and compliance positioning
+Biord's digital architecture references ISCC chain-of-custody and mass-balance concepts. The architecture is designed for future interoperability with the EU Union Database for Biofuels (UDB). This is **not** a claim of ISCC EU certification, active UDB integration or regulatory approval. Certifications and transaction-specific compliance status must be verified independently.
+
+## Primary pages
+- Portuguese: https://biord.com.br/pt/
+- English: https://biord.com.br/en/
+- Spanish: https://biord.com.br/es/
+- Traceability (EN): https://biord.com.br/en/rastreabilidade/
+- Brazilian UCO supply (EN): https://biord.com.br/en/fornecimento-uco/
+- Generators (PT): https://biord.com.br/pt/geradores/
+
+## Contact
+- Email: contato@biord.com.br
+- Application: https://app.biord.com.br
+- Official website: https://biord.com.br

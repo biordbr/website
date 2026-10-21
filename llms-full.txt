@@ -1,0 +1,13 @@
+# Biord — Expanded background
+Biord is a digital infrastructure and marketplace for Brazilian used cooking oil (UCO). Its evidence system is designed to preserve the link between generated waste and commercial batches as collections are aggregated.
+
+## Data captured
+Generator and origin identification; pickup validation; timestamped and geolocated photographic evidence; collector identity; receiving facility confirmations; inbound/outbound batch information; inventory and mass-balance-based reconciliation. Operational and quality data vary by deployment and transaction.
+
+## Audience
+Generators: restaurants, food service businesses and eligible collection points seeking commercial outlets or responsible-disposal benefits.
+Buyers: industrial and trading clients sourcing Brazilian used cooking oil with documented provenance.
+Partners: collectors and aggregation facilities managing the physical movement and treatment chain.
+
+## Claims
+Designed with reference to ISCC mass balance and chain-of-custody principles, not an assertion of certification. Designed to connect to the Union Database for Biofuels, not a claim of an existing approved connection.
