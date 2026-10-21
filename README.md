@@ -1,16 +1,41 @@
-# Biord — versão fiel ao HTML original
+# Biord — site multilíngue
 
-Esta reconstrução separa o HTML original em CSS, JS, imagens e **12 páginas HTML estáticas reais**. O cabeçalho, navbar, rodapé, componentes, tema claro/escuro, cupons e identidade visual são derivados do arquivo original (não do redesign verde).
+Site estático com identidade azul, navegação compartilhada e versões em português, inglês e espanhol. Cada diretório contém seu `index.html`; CSS, JavaScript e imagens ficam em `assets/`.
 
 ## Publicação
-Faça backup do repositório; copie o conteúdo deste ZIP para a raiz pública do site Hostinger; verifique os caminhos `/pt/`, `/en/`, `/es/`, subpáginas e `sitemap.xml`. Cada pasta tem seu próprio `index.html`; confirme que o host suporta URLs por diretórios.
+
+Publique os arquivos na raiz pública do domínio, preservando a estrutura das pastas. A hospedagem deve servir URLs por diretório, como `/pt/servicos/`. O acesso à raiz redireciona para `/pt/`.
 
 ## Navegação
-Menu original preservado: Início, Serviços, Restaurantes, Sobre, Plataforma, Notícias. Botão de idioma alterna PT → EN → ES; páginas físicas e marcação hreflang. Sem roteador pesado nem carregamento dinâmico: arquivos CSS/JS/imagens são cacheáveis entre páginas.
 
-## Observações
-- O conteúdo original em português está preservado integralmente, inclusive reconhecimentos ONU, Green Sampa e InovAtiva.
-- Inglês usa o dicionário pré-existente do próprio HTML e textos adicionais específicos. Espanhol tem tradução dos títulos, navegação e novos textos estratégicos, **mas ainda há blocos originais em português que precisam de revisão editorial humana antes de publicar a versão ES**.
-- Evidência de origem, ISCC e UDB são apresentados sem declarar certificação ou integração ativa.
-- O tráfego orgânico não é garantido; recomenda-se Search Console, links externos, conteúdo especializado e medir Core Web Vitals.
-- Não houve publicação no GitHub/Hostinger. Teste o ZIP em staging antes de substituir produção.
+- Serviços reúne os submenus Soluções e Rastreabilidade.
+- Restaurantes reúne Visão geral e Benefícios.
+- A plataforma e os cadastros apontam para `https://app.biord.com.br`.
+- Notícias aponta para `https://biord.com.br/noticias/`, onde será servido o WordPress. O código e a configuração desse WordPress não fazem parte deste repositório.
+- O seletor de idiomas mantém o visitante na página equivalente.
+
+## Sitemap e Search Console
+
+O `sitemap.xml` contém **27 URLs canônicas: 9 páginas em 3 idiomas**. Existem 28 arquivos HTML nos diretórios de idiomas: `/en/fornecimento-uco/` é uma versão antiga que declara `/en/sourcing/` como canônica, portanto não é contada novamente. A raiz redireciona para `/pt/` e também não é uma página adicional.
+
+Para atualizar o arquivo com as páginas canônicas e os `hreflang` declarados no HTML:
+
+```sh
+python3 scripts/update-sitemap.py
+```
+
+O gerador verifica os destinos dos alternates e preserva as datas `lastmod` existentes. Quando houver mudanças reais em uma página, atualize sua data; páginas novas entram sem uma data presumida.
+
+O sitemap deste projeto não lista posts do WordPress, que são gerenciados por outro sistema. Depois de publicar o WordPress em `/noticias/`, envie também o sitemap que ele disponibilizar ao Search Console. A contagem de URLs descobertas em um sitemap não é uma confirmação de que todas foram indexadas.
+
+## Marca e compartilhamento
+
+O favicon usa o símbolo quadrado da Biord. As páginas têm metadados Open Graph e Twitter com cartões de 1200 × 630 pixels em cada idioma. Para gerar novamente os cartões com Chrome/Chromium e Pillow instalados:
+
+```sh
+python3 scripts/generate-social-cards.py --render
+```
+
+## Conteúdo
+
+As versões em inglês e espanhol foram traduzidas mantendo o sentido do conteúdo original. Referências a ISCC e UDB não declaram certificação nem integração ativa.
