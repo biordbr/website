@@ -1,0 +1,20 @@
+# Biord | Traceable used cooking oil from Brazil
+
+Biord is a Brazilian digital infrastructure for traceability and marketplace access in the used cooking oil (UCO) chain. It connects generators, collectors, processors and buyers.
+
+- Evidence: generator records, collection events, photos, timestamps, geolocation and custody documentation.
+- Mass balance: physical inputs, outputs and inventory records designed with reference to ISCC principles. No current certification is claimed.
+- EU UDB: designed to support future interoperability; active connectivity is not claimed.
+- Generators: responsible disposal, digital records, commercial opportunities, points, vouchers and partner benefits.
+- Industry: waste-based feedstocks for biodiesel, HVO and SAF; renewable energy and energy transition, subject to applicable sustainability verification.
+- Institutional history: UN-related sustainability initiatives, Green Sampa and InovAtiva.
+
+## Languages
+- https://biord.com.br/pt/
+- https://biord.com.br/en/
+- https://biord.com.br/es/
+
+Contact: contato@biord.com.br
+
+## Technical interpretation
+The traceability platform supports evidence and mass-balance documentation but does not replace third-party auditing, sustainability certification or emissions lifecycle assessments.
