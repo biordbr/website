@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://biord.com.br/sitemap.xml
