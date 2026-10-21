@@ -35,24 +35,71 @@
     <link rel="stylesheet" href="/assets/css/site.css" />
     <script src="/assets/js/site.js" defer></script>
   </head>
-  <body class="editorial-page">
+  <body>
     <header>
-      <nav aria-label="Navegação principal">
-        <a href="/pt/">Biord</a>
-        <a href="/pt/solucoes/">Soluções</a>
-        <a href="/pt/geradores/">Para quem gera</a>
-        <a href="/pt/rastreabilidade/">Rastreabilidade</a>
-        <a href="/pt/fornecimento-uco/">Fornecimento UCO</a>
-      </nav>
-      <div class="langs" aria-label="Seletor de idioma">
-        <a href="/pt/fornecimento-uco/" aria-current="page">PT</a>
-        <a href="/en/fornecimento-uco/">EN</a>
-        <a href="/es/fornecimiento-uco/">ES</a>
-      </div>
-    </header>
+<div class="wrap nav">
+<a class="logo" data-route="home" href="/pt/"><img alt="Biord" decoding="async" loading="lazy" src="/assets/img/biord-logo.png"/><span class="biord"><span>Bio</span><span>rd</span></span></a>
+<nav>
+<ul class="nav-links">
+<li><a data-route="home" href="/pt/">Início</a></li>
+<li><a data-route="fornecimento-uco" href="/pt/fornecimento-uco/">Fornecimento UCO</a></li>
+<li><a data-route="solucoes-operacionais" href="/pt/solucoes-operacionais/">Soluções operacionais</a></li>
+<li><a data-route="servicos" href="/pt/servicos/">Serviços</a></li>
+<li><a data-route="restaurantes" href="/pt/restaurantes/">Restaurantes</a></li>
+<li><a data-route="sobre" href="/pt/sobre/">Sobre</a></li>
+<li><a href="https://app.biord.com.br" rel="noopener" target="_blank">Plataforma</a></li>
+<li><a href="https://blog.biord.com.br" rel="noopener" target="_blank">Notícias</a></li>
+<li><a data-route="solucoes" href="/pt/solucoes/">Soluções</a></li>
+<li><a data-route="rastreabilidade" href="/pt/rastreabilidade/">Rastreabilidade</a></li>
+</ul>
+</nav>
+<div class="nav-cta">
+<div class="langs" aria-label="Seletor de idioma">
+<a href="/pt/fornecimento-uco/" aria-current="page">PT</a>
+<a href="/en/fornecimento-uco/">EN</a>
+<a href="/es/fornecimento-uco/">ES</a>
+</div>
+<button aria-label="Alternar tema claro ou escuro" class="theme-toggle" id="themeToggle" title="Alternar tema">
+<svg class="icon-sun" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg>
+<svg class="icon-moon" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M21 12.6A9 9 0 1 1 11.4 3a7 7 0 0 0 9.6 9.6z"></path></svg>
+</button>
+<a class="btn btn-outline" href="/pt/#global-supply">Fornecimento global</a>
+<a class="btn btn-coral" href="https://app.biord.com.br/register" rel="noopener" target="_blank">Encontrar PEV</a>
+</div>
+<button aria-expanded="false" aria-label="Abrir menu" class="burger" id="burger">
+<span></span><span></span>
+</button>
+</div>
+<div class="wrap">
+<div class="mobile-panel" id="mobilePanel">
+<a data-route="rastreabilidade" href="/pt/rastreabilidade/">Rastreabilidade</a>
+<a data-route="solucoes" href="/pt/solucoes/">Soluções</a>
+<a data-route="home" href="/pt/">Início</a>
+<a data-route="fornecimento-uco" href="/pt/fornecimento-uco/">Fornecimento UCO</a>
+<a data-route="solucoes-operacionais" href="/pt/solucoes-operacionais/">Soluções operacionais</a>
+<a data-route="servicos" href="/pt/servicos/">Serviços</a>
+<a data-route="restaurantes" href="/pt/restaurantes/">Restaurantes</a>
+<a data-route="sobre" href="/pt/sobre/">Sobre</a>
+<a href="https://app.biord.com.br" rel="noopener" target="_blank">Plataforma</a>
+<a href="https://blog.biord.com.br" rel="noopener" target="_blank">Notícias</a>
+<a href="#contato">Contato</a>
+<a href="https://app.biord.com.br/register" rel="noopener" style="color:var(--coral);" target="_blank">Encontrar PEV →</a>
+<div class="langs" aria-label="Seletor de idioma">
+<a href="/pt/fornecimento-uco/" aria-current="page">PT</a>
+<a href="/en/fornecimento-uco/">EN</a>
+<a href="/es/fornecimento-uco/">ES</a>
+</div>
+<button class="theme-toggle mobile" id="themeToggleMobile">
+<svg class="icon-sun" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg>
+<svg class="icon-moon" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M21 12.6A9 9 0 1 1 11.4 3a7 7 0 0 0 9.6 9.6z"></path></svg>
+<span id="themeLabelMobile">Modo escuro</span>
+</button>
+</div>
+</div>
+</header>
 
-    <main id="content">
-      <section>
+    <main class="page content-page" id="content">
+      <section class="subhero"><div class="wrap">
         <p><strong>Suprimento global de UCO</strong></p>
         <h1>Suprimento Seguro de UCO para HVO Feedstock e Matéria-Prima para SAF</h1>
         <p>
@@ -64,10 +111,10 @@
           Atuamos com traders, refinarias e processadores que buscam uma estratégia de abastecimento mais
           resiliente para HVO feedstock, matéria-prima para SAF e cadeias de energia circular.
         </p>
-        <a href="#contato">Solicitar dossier de fornecimento</a>
-      </section>
+        <a class="btn btn-coral" href="#contato">Solicitar dossier de fornecimento</a>
+      </div></section>
 
-      <section>
+      <section><div class="wrap">
         <h2>Contexto de mercado: interrupção de suprimento e necessidade de alternativas confiáveis</h2>
         <p>
           O mercado de óleo de cozinha usado está sob pressão. A redução da disponibilidade regional na Ásia,
@@ -83,9 +130,9 @@
           <li><strong>Exigência de qualidade:</strong> compradores exigem maior visibilidade sobre origem e documentos de cadeia de custódia.</li>
           <li><strong>Resiliência logística:</strong> diversificação de fornecedores é essencial em momentos de restrição regional.</li>
         </ul>
-      </section>
+      </div></section>
 
-      <section>
+      <section><div class="wrap">
         <h2>Por que o Brasil é uma alternativa estratégica de fornecimento</h2>
         <p>
           O Brasil oferece escala operacional, densidade de coleta e estrutura para abastecimento mais previsível,
@@ -97,9 +144,9 @@
           <li><strong>Transparência operacional:</strong> geolocalização, fotos e histórico de movimentação reforçam a confiança.</li>
           <li><strong>Flexibilidade comercial:</strong> a oferta pode ser organizada conforme logística e requisitos do downstream.</li>
         </ul>
-      </section>
+      </div></section>
 
-      <section>
+      <section><div class="wrap">
         <h2>Arquitetura de rastreabilidade digital para compras de UCO</h2>
         <p>
           A plataforma da Biord foi desenhada para tornar o suprimento de UCO mais auditável e operacionalmente gerenciável.
@@ -112,9 +159,9 @@
           <li><strong>Lógica de balanço de massa:</strong> rastreio por lote ajuda a reconciliar entradas, movimentações e saídas.</li>
           <li><strong>Visibilidade para o comprador:</strong> fluxo documentado e revisão de evidências apoiam decisões de compra.</li>
         </ul>
-      </section>
+      </div></section>
 
-      <section>
+      <section><div class="wrap">
         <h2>O que compradores esperam de um fornecedor de UCO</h2>
         <p>
           Equipes de compras e refinarias exigem mais do que uma listagem de produto. Elas precisam de um parceiro que reduza incerteza em suprimento, documentação e logística.
@@ -125,9 +172,9 @@
           <li><strong>Continuidade de suprimento</strong> em momentos de instabilidade do mercado regional.</li>
           <li><strong>Coordenação de volume</strong> para planejamento logístico e requisitos do downstream.</li>
         </ul>
-      </section>
+      </div></section>
 
-      <section id="contato">
+      <section id="contato"><div class="wrap">
         <h2>Solicitar dossier de fornecimento</h2>
         <p>
           Fale com a nossa equipe sobre suprimento de UCO, HVO feedstock, matéria-prima para SAF e planejamento de compras frente à volatilidade global.
@@ -139,11 +186,11 @@
           <p><label>Requisitos <textarea name="requisitos"></textarea></label></p>
           <button type="submit">Solicitar consulta de suprimento</button>
         </form>
-      </section>
+      </div></section>
     </main>
 
-    <footer>
+    <footer class="content-footer"><div class="wrap">
       <p>Biord — suprimento de UCO com rastreabilidade digital e infraestrutura de cadeia de custódia.</p>
-    </footer>
+    </div></footer>
   </body>
 </html>

@@ -35,24 +35,71 @@
     <link rel="stylesheet" href="/assets/css/site.css" />
     <script src="/assets/js/site.js" defer></script>
   </head>
-  <body class="editorial-page">
+  <body>
     <header>
-      <nav aria-label="Navegación principal">
-        <a href="/es/">Biord</a>
-        <a href="/es/solucoes/">Soluciones</a>
-        <a href="/es/geradores/">Para generadores</a>
-        <a href="/es/rastreabilidade/">Trazabilidad</a>
-        <a href="/es/fornecimento-uco/">Suministro UCO</a>
-      </nav>
-      <div class="langs" aria-label="Selector de idioma">
-        <a href="/pt/solucoes-operacionais/">PT</a>
-        <a href="/en/operating-solutions/">EN</a>
-        <a href="/es/soluciones-operativas/" aria-current="page">ES</a>
-      </div>
-    </header>
+<div class="wrap nav">
+<a class="logo" data-route="home" href="/es/"><img alt="Biord" decoding="async" loading="lazy" src="/assets/img/biord-logo.png"/><span class="biord"><span>Bio</span><span>rd</span></span></a>
+<nav>
+<ul class="nav-links">
+<li><a data-route="home" href="/es/">Inicio</a></li>
+<li><a data-route="fornecimiento-uco" href="/es/fornecimento-uco/">Fornecimiento UCO</a></li>
+<li><a data-route="soluciones-operativas" href="/es/soluciones-operativas/">Soluciones operativas</a></li>
+<li><a data-route="servicos" href="/es/servicos/">Servicios</a></li>
+<li><a data-route="restaurantes" href="/es/restaurantes/">Restaurantes</a></li>
+<li><a data-route="sobre" href="/es/sobre/">Nosotros</a></li>
+<li><a href="https://app.biord.com.br" rel="noopener" target="_blank">Plataforma</a></li>
+<li><a href="https://blog.biord.com.br" rel="noopener" target="_blank">Noticias</a></li>
+<li><a data-route="solucoes" href="/es/solucoes/">Soluciones</a></li>
+<li><a data-route="rastreabilidade" href="/es/rastreabilidade/">Trazabilidad</a></li>
+</ul>
+</nav>
+<div class="nav-cta">
+<div class="langs" aria-label="Selector de idioma">
+<a href="/pt/solucoes-operacionais/">PT</a>
+<a href="/en/operating-solutions/">EN</a>
+<a href="/es/soluciones-operativas/" aria-current="page">ES</a>
+</div>
+<button aria-label="Alternar tema claro ou escuro" class="theme-toggle" id="themeToggle" title="Alternar tema">
+<svg class="icon-sun" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg>
+<svg class="icon-moon" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M21 12.6A9 9 0 1 1 11.4 3a7 7 0 0 0 9.6 9.6z"></path></svg>
+</button>
+<a class="btn btn-outline" href="/es/#global-supply">Suministro internacional</a>
+<a class="btn btn-coral" href="https://app.biord.com.br/register" rel="noopener" target="_blank">Buscar punto de entrega</a>
+</div>
+<button aria-expanded="false" aria-label="Abrir menu" class="burger" id="burger">
+<span></span><span></span>
+</button>
+</div>
+<div class="wrap">
+<div class="mobile-panel" id="mobilePanel">
+<a data-route="rastreabilidade" href="/es/rastreabilidade/">Trazabilidad</a>
+<a data-route="solucoes" href="/es/solucoes/">Soluciones</a>
+<a data-route="home" href="/es/">Inicio</a>
+<a data-route="fornecimiento-uco" href="/es/fornecimento-uco/">Fornecimiento UCO</a>
+<a data-route="soluciones-operativas" href="/es/soluciones-operativas/">Soluciones operativas</a>
+<a data-route="servicos" href="/es/servicos/">Servicios</a>
+<a data-route="restaurantes" href="/es/restaurantes/">Restaurantes</a>
+<a data-route="sobre" href="/es/sobre/">Nosotros</a>
+<a href="https://app.biord.com.br" rel="noopener" target="_blank">Plataforma</a>
+<a href="https://blog.biord.com.br" rel="noopener" target="_blank">Noticias</a>
+<a href="#contato">Contacto</a>
+<a href="https://app.biord.com.br/register" rel="noopener" style="color:var(--coral);" target="_blank">Buscar punto de entrega →</a>
+<div class="langs" aria-label="Selector de idioma">
+<a href="/pt/solucoes-operacionais/">PT</a>
+<a href="/en/operating-solutions/">EN</a>
+<a href="/es/soluciones-operativas/" aria-current="page">ES</a>
+</div>
+<button class="theme-toggle mobile" id="themeToggleMobile">
+<svg class="icon-sun" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg>
+<svg class="icon-moon" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M21 12.6A9 9 0 1 1 11.4 3a7 7 0 0 0 9.6 9.6z"></path></svg>
+<span id="themeLabelMobile">Modo oscuro</span>
+</button>
+</div>
+</div>
+</header>
 
-    <main id="content">
-      <section>
+    <main class="page content-page" id="content">
+      <section class="subhero"><div class="wrap">
         <p><strong>Economía circular para food service</strong></p>
         <h1>Aumente el Margen de su Restaurante Transformando Residuos en Crédito Operativo</h1>
         <p>
@@ -64,10 +111,10 @@
           solo como costo de descarte, la operación genera saldo en la plataforma que puede ser retirado
           por transferencias o utilizado como moneda de intercambio en herramientas y soluciones esenciales.
         </p>
-        <a href="#calculo">Calcule su potencial de crédito</a>
-      </section>
+        <a class="btn btn-coral" href="#calculo">Calcule su potencial de crédito</a>
+      </div></section>
 
-      <section>
+      <section><div class="wrap">
         <h2>El modelo de lucro de Biord</h2>
         <p>
           El gestor del restaurante no necesita ver el residuo solo como un problema logístico. Debe verlo
@@ -85,9 +132,9 @@
         <p>
           Esto transforma un costo de descarte en una ventaja operativa y financiera para la empresa.
         </p>
-      </section>
+      </div></section>
 
-      <section>
+      <section><div class="wrap">
         <h2>Cómo ayuda a reducir costos y aumentar el margen</h2>
         <p>
           Dueños de restaurantes y gestores de operación buscan respuestas prácticas para los desafíos cotidianos:
@@ -102,9 +149,9 @@
           Biord ofrece una solución simple para transformar un proceso de descarte en un beneficio de eficiencia operativa,
           mejor caja y ventaja competitiva.
         </p>
-      </section>
+      </div></section>
 
-      <section>
+      <section><div class="wrap">
         <h2>Marketplace de soluciones aliadas</h2>
         <p>
           El saldo generado por el aceite recolectado puede ser utilizado en el ecosistema Biord para contratar socios estratégicos que ayuden al restaurante a operar mejor, vender más y controlar costos con más rigor.
@@ -127,9 +174,9 @@
           <strong>EstocaAi</strong> ayuda a optimizar el inventario, reducir desperdicios y mejorar la reposición de insumos.
           En food service, esto significa menos pérdidas, menos exceso y más eficiencia financiera en la cocina y en el punto de venta.
         </p>
-      </section>
+      </div></section>
 
-      <section>
+      <section><div class="wrap">
         <h2>Conformidad y blindaje jurídico</h2>
         <p>
           El restaurante también gana una capa de protección operativa con la emisión automática del certificado de conformidad ambiental.
@@ -138,9 +185,9 @@
         <p>
           En otras palabras, la operación gana <strong>blindaje jurídico</strong> y más seguridad financiera en un proceso que muchas empresas tratan como pérdida sin retorno.
         </p>
-      </section>
+      </div></section>
 
-      <section id="calculo">
+      <section id="calculo"><div class="wrap">
         <h2>Calcule su potencial de crédito y active su cuenta corporativa</h2>
         <p>
           Descubra cuánto puede generar su restaurante a partir del aceite usado y vea cómo ese saldo puede convertirse en eficiencia, caja y soluciones que fortalecen el margen.
@@ -172,11 +219,11 @@
           </p>
           <button type="submit">Solicitar evaluación</button>
         </form>
-      </section>
+      </div></section>
     </main>
 
-    <footer>
+    <footer class="content-footer" id="contato"><div class="wrap">
       <p>Biord — tecnología y marketplace para transformar residuos en crédito operativo.</p>
-    </footer>
+    </div></footer>
   </body>
 </html>
