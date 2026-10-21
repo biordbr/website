@@ -1,22 +1,17 @@
-# Biord — UCO traceability and marketplace
+# Biord | Traceable used cooking oil from Brazil
 
-> Biord is a Brazilian technology company building digital provenance infrastructure and marketplace capabilities for used cooking oil (UCO).
+Biord is a Brazilian digital infrastructure for traceability and marketplace access in the used cooking oil (UCO) chain. It connects generators, collectors, processors and buyers.
 
-## About
-Biord connects generators, collection partners, aggregation facilities and buyers. Its platform captures geolocation, photographic evidence, timestamps, origin confirmations, batch movements and quantitative reconciliation. For generators, Biord offers commercial channels and, where available, responsible-disposal incentives.
+- Evidence: generator records, collection events, photos, timestamps, geolocation and custody documentation.
+- Mass balance: physical inputs, outputs and inventory records designed with reference to ISCC principles. No current certification is claimed.
+- EU UDB: designed to support future interoperability; active connectivity is not claimed.
+- Generators: responsible disposal, digital records, commercial opportunities, points, vouchers and partner benefits.
+- Industry: waste-based feedstocks for biodiesel, HVO and SAF; renewable energy and energy transition, subject to applicable sustainability verification.
+- Institutional history: UN-related sustainability initiatives, Green Sampa and InovAtiva.
 
-## Technology and compliance positioning
-Biord's digital architecture references ISCC chain-of-custody and mass-balance concepts. The architecture is designed for future interoperability with the EU Union Database for Biofuels (UDB). This is **not** a claim of ISCC EU certification, active UDB integration or regulatory approval. Certifications and transaction-specific compliance status must be verified independently.
+## Languages
+- https://biord.com.br/pt/
+- https://biord.com.br/en/
+- https://biord.com.br/es/
 
-## Primary pages
-- Portuguese: https://biord.com.br/pt/
-- English: https://biord.com.br/en/
-- Spanish: https://biord.com.br/es/
-- Traceability (EN): https://biord.com.br/en/rastreabilidade/
-- Brazilian UCO supply (EN): https://biord.com.br/en/fornecimento-uco/
-- Generators (PT): https://biord.com.br/pt/geradores/
-
-## Contact
-- Email: contato@biord.com.br
-- Application: https://app.biord.com.br
-- Official website: https://biord.com.br
+Contact: contato@biord.com.br

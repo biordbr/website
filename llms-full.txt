@@ -1,13 +1,20 @@
-# Biord — Expanded background
-Biord is a digital infrastructure and marketplace for Brazilian used cooking oil (UCO). Its evidence system is designed to preserve the link between generated waste and commercial batches as collections are aggregated.
+# Biord | Traceable used cooking oil from Brazil
 
-## Data captured
-Generator and origin identification; pickup validation; timestamped and geolocated photographic evidence; collector identity; receiving facility confirmations; inbound/outbound batch information; inventory and mass-balance-based reconciliation. Operational and quality data vary by deployment and transaction.
+Biord is a Brazilian digital infrastructure for traceability and marketplace access in the used cooking oil (UCO) chain. It connects generators, collectors, processors and buyers.
 
-## Audience
-Generators: restaurants, food service businesses and eligible collection points seeking commercial outlets or responsible-disposal benefits.
-Buyers: industrial and trading clients sourcing Brazilian used cooking oil with documented provenance.
-Partners: collectors and aggregation facilities managing the physical movement and treatment chain.
+- Evidence: generator records, collection events, photos, timestamps, geolocation and custody documentation.
+- Mass balance: physical inputs, outputs and inventory records designed with reference to ISCC principles. No current certification is claimed.
+- EU UDB: designed to support future interoperability; active connectivity is not claimed.
+- Generators: responsible disposal, digital records, commercial opportunities, points, vouchers and partner benefits.
+- Industry: waste-based feedstocks for biodiesel, HVO and SAF; renewable energy and energy transition, subject to applicable sustainability verification.
+- Institutional history: UN-related sustainability initiatives, Green Sampa and InovAtiva.
 
-## Claims
-Designed with reference to ISCC mass balance and chain-of-custody principles, not an assertion of certification. Designed to connect to the Union Database for Biofuels, not a claim of an existing approved connection.
+## Languages
+- https://biord.com.br/pt/
+- https://biord.com.br/en/
+- https://biord.com.br/es/
+
+Contact: contato@biord.com.br
+
+## Technical interpretation
+The traceability platform supports evidence and mass-balance documentation but does not replace third-party auditing, sustainability certification or emissions lifecycle assessments.
