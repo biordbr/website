@@ -1,51 +1,219 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://biord.com.br/pt/</loc>
+    <lastmod>2026-10-21</lastmod>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://biord.com.br/pt/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://biord.com.br/en/" />
     <xhtml:link rel="alternate" hreflang="es" href="https://biord.com.br/es/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://biord.com.br/pt/" />
   </url>
   <url>
-    <loc>https://biord.com.br/en/sourcing/</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://biord.com.br/pt/fornecimento-uco/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://biord.com.br/en/sourcing/" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://biord.com.br/es/fornecimiento-uco/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://biord.com.br/en/sourcing/" />
+    <loc>https://biord.com.br/en/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://biord.com.br/pt/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://biord.com.br/en/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://biord.com.br/es/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://biord.com.br/pt/" />
+  </url>
+  <url>
+    <loc>https://biord.com.br/es/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://biord.com.br/pt/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://biord.com.br/en/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://biord.com.br/es/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://biord.com.br/pt/" />
+  </url>
+  <url>
+    <loc>https://biord.com.br/pt/servicos/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://biord.com.br/pt/servicos/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://biord.com.br/en/servicos/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://biord.com.br/es/servicos/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://biord.com.br/pt/servicos/" />
+  </url>
+  <url>
+    <loc>https://biord.com.br/en/servicos/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://biord.com.br/pt/servicos/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://biord.com.br/en/servicos/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://biord.com.br/es/servicos/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://biord.com.br/pt/servicos/" />
+  </url>
+  <url>
+    <loc>https://biord.com.br/es/servicos/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://biord.com.br/pt/servicos/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://biord.com.br/en/servicos/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://biord.com.br/es/servicos/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://biord.com.br/pt/servicos/" />
+  </url>
+  <url>
+    <loc>https://biord.com.br/pt/restaurantes/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://biord.com.br/pt/restaurantes/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://biord.com.br/en/restaurantes/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://biord.com.br/es/restaurantes/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://biord.com.br/pt/restaurantes/" />
+  </url>
+  <url>
+    <loc>https://biord.com.br/en/restaurantes/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://biord.com.br/pt/restaurantes/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://biord.com.br/en/restaurantes/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://biord.com.br/es/restaurantes/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://biord.com.br/pt/restaurantes/" />
+  </url>
+  <url>
+    <loc>https://biord.com.br/es/restaurantes/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://biord.com.br/pt/restaurantes/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://biord.com.br/en/restaurantes/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://biord.com.br/es/restaurantes/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://biord.com.br/pt/restaurantes/" />
+  </url>
+  <url>
+    <loc>https://biord.com.br/pt/sobre/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://biord.com.br/pt/sobre/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://biord.com.br/en/sobre/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://biord.com.br/es/sobre/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://biord.com.br/pt/sobre/" />
+  </url>
+  <url>
+    <loc>https://biord.com.br/en/sobre/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://biord.com.br/pt/sobre/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://biord.com.br/en/sobre/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://biord.com.br/es/sobre/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://biord.com.br/pt/sobre/" />
+  </url>
+  <url>
+    <loc>https://biord.com.br/es/sobre/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://biord.com.br/pt/sobre/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://biord.com.br/en/sobre/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://biord.com.br/es/sobre/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://biord.com.br/pt/sobre/" />
+  </url>
+  <url>
+    <loc>https://biord.com.br/pt/solucoes/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://biord.com.br/pt/solucoes/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://biord.com.br/en/solucoes/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://biord.com.br/es/solucoes/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://biord.com.br/pt/solucoes/" />
+  </url>
+  <url>
+    <loc>https://biord.com.br/en/solucoes/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://biord.com.br/pt/solucoes/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://biord.com.br/en/solucoes/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://biord.com.br/es/solucoes/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://biord.com.br/pt/solucoes/" />
+  </url>
+  <url>
+    <loc>https://biord.com.br/es/solucoes/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://biord.com.br/pt/solucoes/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://biord.com.br/en/solucoes/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://biord.com.br/es/solucoes/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://biord.com.br/pt/solucoes/" />
+  </url>
+  <url>
+    <loc>https://biord.com.br/pt/rastreabilidade/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://biord.com.br/pt/rastreabilidade/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://biord.com.br/en/rastreabilidade/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://biord.com.br/es/rastreabilidade/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://biord.com.br/pt/rastreabilidade/" />
+  </url>
+  <url>
+    <loc>https://biord.com.br/en/rastreabilidade/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://biord.com.br/pt/rastreabilidade/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://biord.com.br/en/rastreabilidade/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://biord.com.br/es/rastreabilidade/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://biord.com.br/pt/rastreabilidade/" />
+  </url>
+  <url>
+    <loc>https://biord.com.br/es/rastreabilidade/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://biord.com.br/pt/rastreabilidade/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://biord.com.br/en/rastreabilidade/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://biord.com.br/es/rastreabilidade/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://biord.com.br/pt/rastreabilidade/" />
+  </url>
+  <url>
+    <loc>https://biord.com.br/pt/geradores/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://biord.com.br/pt/geradores/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://biord.com.br/en/geradores/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://biord.com.br/es/geradores/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://biord.com.br/pt/geradores/" />
+  </url>
+  <url>
+    <loc>https://biord.com.br/en/geradores/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://biord.com.br/pt/geradores/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://biord.com.br/en/geradores/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://biord.com.br/es/geradores/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://biord.com.br/pt/geradores/" />
+  </url>
+  <url>
+    <loc>https://biord.com.br/es/geradores/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://biord.com.br/pt/geradores/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://biord.com.br/en/geradores/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://biord.com.br/es/geradores/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://biord.com.br/pt/geradores/" />
   </url>
   <url>
     <loc>https://biord.com.br/pt/fornecimento-uco/</loc>
+    <lastmod>2026-10-21</lastmod>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://biord.com.br/pt/fornecimento-uco/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://biord.com.br/en/sourcing/" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://biord.com.br/es/fornecimiento-uco/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://biord.com.br/en/sourcing/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://biord.com.br/es/fornecimento-uco/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://biord.com.br/pt/fornecimento-uco/" />
   </url>
   <url>
-    <loc>https://biord.com.br/es/fornecimiento-uco/</loc>
+    <loc>https://biord.com.br/en/sourcing/</loc>
+    <lastmod>2026-10-21</lastmod>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://biord.com.br/pt/fornecimento-uco/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://biord.com.br/en/sourcing/" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://biord.com.br/es/fornecimiento-uco/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://biord.com.br/en/sourcing/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://biord.com.br/es/fornecimento-uco/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://biord.com.br/pt/fornecimento-uco/" />
   </url>
   <url>
-    <loc>https://biord.com.br/en/operating-solutions/</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://biord.com.br/pt/solucoes-operacionais/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://biord.com.br/en/operating-solutions/" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://biord.com.br/es/soluciones-operativas/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://biord.com.br/en/operating-solutions/" />
+    <loc>https://biord.com.br/es/fornecimento-uco/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://biord.com.br/pt/fornecimento-uco/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://biord.com.br/en/sourcing/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://biord.com.br/es/fornecimento-uco/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://biord.com.br/pt/fornecimento-uco/" />
   </url>
   <url>
     <loc>https://biord.com.br/pt/solucoes-operacionais/</loc>
+    <lastmod>2026-10-21</lastmod>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://biord.com.br/pt/solucoes-operacionais/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://biord.com.br/en/operating-solutions/" />
     <xhtml:link rel="alternate" hreflang="es" href="https://biord.com.br/es/soluciones-operativas/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://biord.com.br/en/operating-solutions/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://biord.com.br/pt/solucoes-operacionais/" />
+  </url>
+  <url>
+    <loc>https://biord.com.br/en/operating-solutions/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://biord.com.br/pt/solucoes-operacionais/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://biord.com.br/en/operating-solutions/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://biord.com.br/es/soluciones-operativas/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://biord.com.br/pt/solucoes-operacionais/" />
   </url>
   <url>
     <loc>https://biord.com.br/es/soluciones-operativas/</loc>
+    <lastmod>2026-10-21</lastmod>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://biord.com.br/pt/solucoes-operacionais/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://biord.com.br/en/operating-solutions/" />
     <xhtml:link rel="alternate" hreflang="es" href="https://biord.com.br/es/soluciones-operativas/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://biord.com.br/en/operating-solutions/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://biord.com.br/pt/solucoes-operacionais/" />
   </url>
 </urlset>
