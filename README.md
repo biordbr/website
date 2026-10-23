@@ -11,7 +11,7 @@ Publique os arquivos na raiz pública do domínio, preservando a estrutura das p
 - Serviços reúne os submenus Soluções e Rastreabilidade.
 - Restaurantes reúne Visão geral e Benefícios.
 - A plataforma e os cadastros apontam para `https://app.biord.com.br`.
-- Notícias aponta para `https://biord.com.br/noticias/`, onde será servido o WordPress. O código e a configuração desse WordPress não fazem parte deste repositório.
+- Notícias aponta para `https://noticias.biord.com.br/`, onde será servido o WordPress. O código e a configuração desse WordPress não fazem parte deste repositório.
 - O seletor de idiomas mantém o visitante na página equivalente.
 
 ## Sitemap e Search Console
@@ -26,7 +26,7 @@ python3 scripts/update-sitemap.py
 
 O gerador verifica os destinos dos alternates e preserva as datas `lastmod` existentes. Quando houver mudanças reais em uma página, atualize sua data; páginas novas entram sem uma data presumida.
 
-O sitemap deste projeto não lista posts do WordPress, que são gerenciados por outro sistema. Depois de publicar o WordPress em `/noticias/`, envie também o sitemap que ele disponibilizar ao Search Console. A contagem de URLs descobertas em um sitemap não é uma confirmação de que todas foram indexadas.
+O sitemap deste projeto não lista posts do WordPress, que são gerenciados por outro sistema. Depois de publicar o WordPress em `noticias.biord.com.br`, envie também o sitemap que ele disponibilizar ao Search Console. A contagem de URLs descobertas em um sitemap não é uma confirmação de que todas foram indexadas.
 
 ## Marca e compartilhamento
 
