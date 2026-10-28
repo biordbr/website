@@ -39,3 +39,13 @@ python3 scripts/generate-social-cards.py --render
 ## Conteúdo
 
 As versões em inglês e espanhol foram traduzidas mantendo o sentido do conteúdo original. Referências a ISCC e UDB não declaram certificação nem integração ativa.
+
+## Favicon no Google
+
+Todas as páginas, inclusive a raiz do domínio, declaram o PNG quadrado estável de 512 × 512 pixels e o fallback `/favicon.ico`, que contém seis resoluções. O endereço antigo `/assets/img/favicon.png` também fornece o símbolo quadrado. Os metadados da raiz são apresentados antes do redirecionamento para `/pt/`.
+
+Se o navegador exibir o ícone, mas o Google ainda não, após publicar os arquivos use **Inspeção de URL → Testar URL publicada** no Search Console para `https://biord.com.br/` e `https://biord.com.br/pt/`. Confirme que o Google consegue acessar as páginas e solicite a indexação da página inicial. O processamento do favicon pode levar dias ou semanas e sua exibição não é garantida.
+
+Em 28/10/2026, as páginas e o PNG responderam HTTP 200 para um navegador comum; `/favicon.ico` ainda respondia 404 antes desta alteração. Requisições de teste com o nome Googlebot receberam 403 por meio de `hcdn`. Isso não prova bloqueio do Google: a Hostinger verifica os IPs dos rastreadores e pode rejeitar clientes que apenas simulam seu identificador. Se o teste publicado do Search Console também receber 403, revise as regras de bots da CDN com a Hostinger; não libere acessos apenas pelo nome do User-Agent.
+
+Referências: [favicon na Pesquisa Google](https://developers.google.com/search/docs/appearance/favicon-in-search) e [rastreadores na CDN Hostinger](https://www.hostinger.com/support/hostinger-cdn-search-engine-crawlers-and-seo/).
