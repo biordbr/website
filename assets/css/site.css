@@ -844,21 +844,28 @@ html{scroll-behavior:smooth} img{max-width:100%} .reveal:not(.in){opacity:1;tran
 .mobile-panel .nav-submenu {min-width:0;box-shadow:none;margin:0 0 12px;padding:6px 10px;border:1px solid var(--ink-line);border-radius:10px;}
 .mobile-panel .nav-submenu a {display:block;padding:12px;border-bottom:0;font-size:14px;}
 
-/* B2C — paleta escura/verde; classes isoladas preservam a identidade do restante do site. */
+/* B2C: dourado da marca, com contraste específico para temas claro e escuro. */
 .consumer-rewards {
-  --consumer-bg: #0F2F27;
-  --consumer-accent: #8DE0A6;
-  --consumer-text: #F4FBF6;
+  --consumer-bg: #FFF4DE;
+  --consumer-accent: #845100;
+  --consumer-text: #3B280F;
+  --consumer-line: rgba(132, 81, 0, .28);
   display: grid;
   grid-template-columns: auto minmax(0, 1fr);
   gap: 22px;
   margin-block: 24px;
   padding: 34px 30px;
-  border: 1px solid rgba(141, 224, 166, .28);
+  border: 1px solid var(--consumer-line);
   border-radius: var(--radius);
   background: var(--consumer-bg);
   color: var(--consumer-text);
   scroll-margin-top: 100px;
+}
+html[data-theme="dark"] .consumer-rewards {
+  --consumer-bg: #241C10;
+  --consumer-accent: #F0B84E;
+  --consumer-text: #F8EEDB;
+  --consumer-line: rgba(240, 184, 78, .32);
 }
 .consumer-rewards .profile-num { color: var(--consumer-accent); }
 .consumer-rewards h2 { font-size: clamp(24px, 2.6vw, 34px); line-height: 1.25; }
@@ -872,15 +879,15 @@ html{scroll-behavior:smooth} img{max-width:100%} .reveal:not(.in){opacity:1;tran
   padding: 14px 24px;
   min-height: 48px;
   border-radius: 100px;
-  background: var(--consumer-accent);
-  color: var(--consumer-bg);
+  background: var(--coral);
+  color: #241804;
   font-weight: 700;
   text-align: center;
   transition: background .2s ease;
 }
-.consumer-rewards .btn-cta:hover { background: #B3EFBE; }
+.consumer-rewards .btn-cta:hover { background: #FFD17A; }
 .consumer-rewards a:focus-visible { outline-color: var(--consumer-accent); }
-.consumer-dropoff { margin-top: 20px; padding-top: 18px; border-top: 1px solid rgba(141, 224, 166, .28); scroll-margin-top: 100px; }
+.consumer-dropoff { margin-top: 20px; padding-top: 18px; border-top: 1px solid var(--consumer-line); scroll-margin-top: 100px; }
 .consumer-dropoff-link { display: inline-block; padding-block: 8px; color: var(--consumer-text); text-decoration: underline; text-underline-offset: 4px; }
 @media (max-width: 600px) {
   .consumer-rewards { grid-template-columns: minmax(0, 1fr); padding: 26px 20px; gap: 12px; }
