@@ -1,0 +1,441 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><style>
+  /* ============================================================
+     VARIÁVEIS / BASE
+     ============================================================ */
+  :root {
+    --bg-deep:   #050a14;
+    --land:      #132a4a;
+    --land-edge: #1e3f6e;
+    
+    /* Cores da Rede Principal (Ciano) */
+    --neon-primary: #00f3ff;
+    
+    /* Cores da Rede Secundária (Azul Escuro/Suporte) */
+    --neon-secondary: #0055aa;
+    
+    --text-dim:  #7fa8cc;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html, body { width: 100%; height: 100%; overflow: hidden; background: transparent; }
+  body::after { content: ''; position: fixed; inset: 0; pointer-events: none; background: radial-gradient(ellipse at center, transparent 45%, rgba(5, 10, 20, .5) 100%); }
+
+  #map { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+
+  /* ============================================================
+     MAPA
+     ============================================================ */
+  .country {
+    fill: var(--land);
+    stroke: var(--land-edge);
+    stroke-width: .6;
+    stroke-linejoin: round;
+  }
+
+  .graticule {
+    fill: none;
+    stroke: #12294a;
+    stroke-width: .5;
+    opacity: .55;
+  }
+
+  .sphere-outline {
+    fill: none;
+    stroke: #1e3f6e;
+    stroke-width: .9;
+    opacity: .45;
+  }
+
+  /* ============================================================
+     ARCOS
+     ============================================================ */
+  /* Linhas Secundárias (Origem: São Paulo) - Mais escuras e discretas */
+  .arc-sec-halo { fill: none; stroke: var(--neon-secondary); stroke-width: 5;   stroke-linecap: round; opacity: .05; }
+  .arc-sec-mid  { fill: none; stroke: var(--neon-secondary); stroke-width: 1.5; stroke-linecap: round; opacity: .25; }
+  .arc-sec-core { fill: none; stroke: var(--neon-secondary); stroke-width: 0.6; stroke-linecap: round; opacity: .6; }
+
+  /* Linhas Primárias (Cidade a Cidade) - Brilhantes e em destaque */
+  .arc-pri-halo { fill: none; stroke: var(--neon-primary); stroke-width: 8;   stroke-linecap: round; opacity: .08; }
+  .arc-pri-mid  { fill: none; stroke: var(--neon-primary); stroke-width: 3;   stroke-linecap: round; opacity: .25; }
+  .arc-pri-core { fill: none; stroke: var(--neon-primary); stroke-width: 1.2; stroke-linecap: round; opacity: .95; }
+
+  /* ============================================================
+     PONTOS
+     ============================================================ */
+  .dest-core { fill: #4fc3ff; }
+  .dest-dot  { fill: #e8fbff; }
+
+  .origin-core { fill: #9beeff; }
+  .origin-ring { fill: none; stroke: var(--neon-primary); stroke-width: 1.2; opacity: .55; }
+  .origin-halo { animation: haloBreath 3.2s ease-in-out infinite; }
+
+  @keyframes haloBreath {
+    0%, 100% { opacity: .75; }
+    50%      { opacity: 1;   }
+  }
+
+  /* Anéis de pulso que emanam de São Paulo */
+  .pulse-ring {
+    fill: none;
+    stroke: var(--neon-primary);
+    stroke-width: 2;
+    filter: drop-shadow(0 0 6px rgba(0, 243, 255, .9));
+  }
+
+
+
+
+</style></head><body><svg id="map" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"></svg><script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/topojson-client@3/dist/topojson-client.min.js"></script><script>(function () {
+    'use strict';
+
+    /* ============================================================
+       1. DADOS GEOGRÁFICOS
+       ============================================================ */
+
+    /** Ponto de origem: São Paulo (Brasil) */
+    const ORIGIN = { name: 'São Paulo', lon: -46.6333, lat: -23.5505 };
+
+    /**
+     * Destinos conectados.
+     * dx / dy   -> deslocamento do rótulo em relação ao ponto (px)
+     * anchor    -> alinhamento do texto
+     */
+    const DESTINATIONS = [
+      { name: 'New York',      lon:  -74.0060, lat:  40.7128, dx:  11, dy:  -4, anchor: 'start' },
+      { name: 'Miami',         lon:  -80.1918, lat:  25.7617, dx:  11, dy:  15, anchor: 'start' },
+      { name: 'Mexico City',   lon:  -99.1332, lat:  19.4326, dx: -11, dy:   3, anchor: 'end'   },
+      { name: 'Bogota',        lon:  -74.0721, lat:   4.7110, dx: -11, dy:  12, anchor: 'end'   },
+      { name: 'Lisbon',        lon:   -9.1393, lat:  38.7223, dx: -11, dy:   7, anchor: 'end'   },
+      { name: 'London',        lon:   -0.1276, lat:  51.5072, dx: -11, dy:  -8, anchor: 'end'   },
+      { name: 'Rotterdam',     lon:    4.4777, lat:  51.9244, dx:  11, dy:   5, anchor: 'start' },
+      { name: 'Istanbul',      lon:   28.9784, lat:  41.0082, dx:  11, dy:  -8, anchor: 'start' },
+      { name: 'Kuwait City',   lon:   47.9774, lat:  29.3759, dx:  11, dy:   6, anchor: 'start' },
+      { name: 'Singapore',     lon:  103.8198, lat:   1.3521, dx:  11, dy:  13, anchor: 'start' },
+      { name: 'Hong Kong',     lon:  114.1694, lat:  22.3193, dx:  11, dy:  14, anchor: 'start' },
+      { name: 'Seoul',         lon:  126.9780, lat:  37.5665, dx:  11, dy:  -6, anchor: 'start' }
+    ];
+
+    /** 
+     * Malha Primária: Conexões diretas entre as cidades.
+     * Pares de índices baseados no array DESTINATIONS.
+     */
+    const PRIMARY_LINKS = [
+      // Eixo Américas -> Europa
+      [0, 1], [1, 2], [2, 3], [3, 4], [4, 5],
+      // Eixo Europa -> Ásia
+      [5, 6], [6, 7], [7, 8], [8, 9], [9, 10], [10, 11],
+      // Conexões cruzadas (Pacífico e Atlântico)
+      [11, 0], [3, 0], [5, 4]
+    ];
+
+    /* ============================================================
+       2. ESTADO GLOBAL
+       ============================================================ */
+
+    const svg = d3.select('#map');
+    let worldFeatures = null;
+
+    let ringLayer   = null;
+    let pulseOrigin = { x: 0, y: 0 };
+
+    let particles = []; // { arc, t, speed, node, type }
+    let rings     = []; // { node, born }
+
+    let prevTime      = performance.now();
+    let lastPulseTime = -Infinity;
+
+    /* ============================================================
+       3. HELPERS DE GEOMETRIA
+       ============================================================ */
+
+    function controlPoint(a, b) {
+      const dx = b.x - a.x;
+      const dy = b.y - a.y;
+      const dist = Math.hypot(dx, dy) || 1;
+
+      let nx = -dy / dist;
+      let ny =  dx / dist;
+
+      if (ny > 0) { nx = -nx; ny = -ny; }
+
+      // Curvatura proporcional à distância.
+      const offset = Math.min(dist * 0.25, 180);
+
+      return {
+        x: (a.x + b.x) / 2 + nx * offset,
+        y: (a.y + b.y) / 2 + ny * offset
+      };
+    }
+
+    function bezierPoint(arc, t) {
+      const mt = 1 - t;
+      return {
+        x: mt * mt * arc.p0.x + 2 * mt * t * arc.p1.x + t * t * arc.p2.x,
+        y: mt * mt * arc.p0.y + 2 * mt * t * arc.p1.y + t * t * arc.p2.y
+      };
+    }
+
+    /* ============================================================
+       4. CONSTRUÇÃO DA CENA
+       ============================================================ */
+
+    function build() {
+      const W = window.innerWidth;
+      const H = window.innerHeight;
+
+      svg.attr('viewBox', `0 0 ${W} ${H}`).attr('width', W).attr('height', H);
+      svg.selectAll('*').remove();
+
+      particles = [];
+      rings = [];
+
+      /* ---------- DEFS ---------- */
+      const defs = svg.append('defs');
+
+      // Gradiente das partículas primárias
+      const pGlow = defs.append('radialGradient').attr('id', 'particleGlow');
+      pGlow.append('stop').attr('offset', '0%').attr('stop-color', '#ffffff').attr('stop-opacity', 1);
+      pGlow.append('stop').attr('offset', '30%').attr('stop-color', '#a9f0ff').attr('stop-opacity', .9);
+      pGlow.append('stop').attr('offset', '60%').attr('stop-color', '#00f3ff').attr('stop-opacity', .3);
+      pGlow.append('stop').attr('offset', '100%').attr('stop-color', '#00f3ff').attr('stop-opacity', 0);
+
+      // Gradiente das partículas secundárias
+      const sGlow = defs.append('radialGradient').attr('id', 'secParticleGlow');
+      sGlow.append('stop').attr('offset', '0%').attr('stop-color', '#ffffff').attr('stop-opacity', .8);
+      sGlow.append('stop').attr('offset', '40%').attr('stop-color', '#0055aa').attr('stop-opacity', .4);
+      sGlow.append('stop').attr('offset', '100%').attr('stop-color', '#0055aa').attr('stop-opacity', 0);
+
+      // Halos dos pontos
+      const dGlow = defs.append('radialGradient').attr('id', 'destGlow');
+      dGlow.append('stop').attr('offset', '0%').attr('stop-color', '#38bdf8').attr('stop-opacity', .65);
+      dGlow.append('stop').attr('offset', '45%').attr('stop-color', '#38bdf8').attr('stop-opacity', .18);
+      dGlow.append('stop').attr('offset', '100%').attr('stop-color', '#38bdf8').attr('stop-opacity', 0);
+
+      const oGlow = defs.append('radialGradient').attr('id', 'originGlow');
+      oGlow.append('stop').attr('offset', '0%').attr('stop-color', '#00f3ff').attr('stop-opacity', .55);
+      oGlow.append('stop').attr('offset', '40%').attr('stop-color', '#00a8ff').attr('stop-opacity', .22);
+      oGlow.append('stop').attr('offset', '100%').attr('stop-color', '#00a8ff').attr('stop-opacity', 0);
+
+      /* ---------- CAMADAS (Ordem de empilhamento) ---------- */
+      // Secundárias ficam atrás
+      const gSecondaryArcs      = svg.append('g');
+      const gSecondaryParticles = svg.append('g');
+      
+      // Primárias ficam na frente
+      const gPrimaryArcs        = svg.append('g');
+      const gPrimaryParticles   = svg.append('g');
+      
+      const gWorld     = svg.insert('g', ':first-child'); // Mapa vai pro fundo
+      const gRings     = svg.append('g');
+      const gPoints    = svg.append('g');
+
+      ringLayer = gRings;
+
+      /* ---------- PROJEÇÃO ---------- */
+      const projection = d3.geoNaturalEarth1()
+        .fitExtent([[14, 14], [W - 14, H - 14]], { type: 'Sphere' });
+      const path = d3.geoPath(projection);
+
+      /* ---------- CONTINENTES ---------- */
+      gWorld.append('path')
+        .attr('class', 'graticule')
+        .attr('d', path(d3.geoGraticule10()));
+
+      gWorld.append('path')
+        .attr('class', 'sphere-outline')
+        .attr('d', path({ type: 'Sphere' }));
+
+      gWorld.selectAll('path.country')
+        .data(worldFeatures)
+        .join('path')
+        .attr('class', 'country')
+        .attr('d', path);
+
+      /* ---------- ORIGEM (São Paulo) ---------- */
+      const oPix = projection([ORIGIN.lon, ORIGIN.lat]);
+      pulseOrigin = { x: oPix[0], y: oPix[1] };
+
+      const cityPixels = DESTINATIONS.map(c => projection([c.lon, c.lat]));
+
+      /* ---------- ARCOS SECUNDÁRIOS (Origem -> Cidades) ---------- */
+      cityPixels.forEach((tPix, i) => {
+        const p0 = { x: oPix[0], y: oPix[1] };
+        const p2 = { x: tPix[0], y: tPix[1] };
+        const p1 = controlPoint(p0, p2);
+
+        const d = `M ${p0.x.toFixed(2)} ${p0.y.toFixed(2)} Q ${p1.x.toFixed(2)} ${p1.y.toFixed(2)} ${p2.x.toFixed(2)} ${p2.y.toFixed(2)}`;
+
+        gSecondaryArcs.append('path').attr('class', 'arc-sec-halo').attr('d', d);
+        gSecondaryArcs.append('path').attr('class', 'arc-sec-mid').attr('d', d);
+        gSecondaryArcs.append('path').attr('class', 'arc-sec-core').attr('d', d);
+
+        const arc = { p0, p1, p2 };
+
+        // 1 partícula lenta e escura para conexões secundárias
+        const g = gSecondaryParticles.append('g');
+        g.append('circle').attr('r', 6).attr('fill', 'url(#secParticleGlow)');
+        g.append('circle').attr('r', 1).attr('fill', '#88ccff');
+
+        particles.push({
+          arc,
+          t: (i * 0.083) % 1,
+          speed: 0.08, 
+          node: g.node(),
+          type: 'secondary'
+        });
+      });
+
+      /* ---------- ARCOS PRIMÁRIOS (Cidade <-> Cidade) ---------- */
+      PRIMARY_LINKS.forEach((link, i) => {
+        const srcPix = cityPixels[link[0]];
+        const tgtPix = cityPixels[link[1]];
+
+        const p0 = { x: srcPix[0], y: srcPix[1] };
+        const p2 = { x: tgtPix[0], y: tgtPix[1] };
+        const p1 = controlPoint(p0, p2);
+
+        const d = `M ${p0.x.toFixed(2)} ${p0.y.toFixed(2)} Q ${p1.x.toFixed(2)} ${p1.y.toFixed(2)} ${p2.x.toFixed(2)} ${p2.y.toFixed(2)}`;
+
+        gPrimaryArcs.append('path').attr('class', 'arc-pri-halo').attr('d', d);
+        gPrimaryArcs.append('path').attr('class', 'arc-pri-mid').attr('d', d);
+        gPrimaryArcs.append('path').attr('class', 'arc-pri-core').attr('d', d);
+
+        const arc = { p0, p1, p2 };
+
+        // 2 partículas rápidas e brilhantes para conexões primárias
+        for (let k = 0; k < 2; k++) {
+          const g = gPrimaryParticles.append('g');
+          g.append('circle').attr('r', 8).attr('fill', 'url(#particleGlow)');
+          g.append('circle').attr('r', 1.6).attr('fill', '#ffffff');
+
+          particles.push({
+            arc,
+            t: ((k / 2) + i * 0.12) % 1,
+            speed: 0.18 + (i % 3) * 0.02, 
+            node: g.node(),
+            type: 'primary'
+          });
+        }
+      });
+
+      /* ---------- PONTOS E LABELS ---------- */
+      cityPixels.forEach((tPix, i) => {
+        const city = DESTINATIONS[i];
+        
+        const pg = gPoints.append('g')
+          .attr('transform', `translate(${tPix[0]},${tPix[1]})`);
+
+        pg.append('circle').attr('r', 11).attr('fill', 'url(#destGlow)');
+        pg.append('circle').attr('r', 3).attr('class', 'dest-core');
+        pg.append('circle').attr('r', 1.2).attr('class', 'dest-dot');
+      });
+
+      /* ---------- PONTO CENTRAL (São Paulo) ---------- */
+      const og = gPoints.append('g')
+        .attr('transform', `translate(${oPix[0]},${oPix[1]})`);
+
+      og.append('circle').attr('r', 34).attr('fill', 'url(#originGlow)').attr('class', 'origin-halo');
+      og.append('circle').attr('r', 9).attr('class', 'origin-ring');
+      og.append('circle').attr('r', 4.2).attr('class', 'origin-core');
+      og.append('circle').attr('r', 1.8).attr('fill', '#ffffff');
+
+      /* ---------- remove o loader ---------- */
+    }
+
+    /* ============================================================
+       5. ANIMAÇÃO
+       ============================================================ */
+
+    function spawnPulse(now) {
+      if (!ringLayer) return;
+
+      const node = ringLayer.append('circle')
+        .attr('class', 'pulse-ring')
+        .attr('cx', pulseOrigin.x)
+        .attr('cy', pulseOrigin.y)
+        .attr('r', 5)
+        .attr('opacity', 0.75)
+        .node();
+
+      rings.push({ node, born: now });
+    }
+
+    function tick(now) {
+      const dt = Math.min((now - prevTime) / 1000, 0.05);
+      prevTime = now;
+
+      // Pulso central
+      if (now - lastPulseTime >= 1000) {
+        lastPulseTime = now;
+        spawnPulse(now);
+      }
+
+      // Anéis
+      for (let i = rings.length - 1; i >= 0; i--) {
+        const ring = rings[i];
+        const k = (now - ring.born) / 1500;
+
+        if (k >= 1) {
+          ring.node.remove();
+          rings.splice(i, 1);
+        } else {
+          const eased = 1 - Math.pow(1 - k, 2.2);
+          ring.node.setAttribute('r', (5 + eased * 135).toFixed(2));
+          ring.node.setAttribute('opacity', ((1 - k) * 0.75).toFixed(3));
+        }
+      }
+
+      // Partículas
+      for (let i = 0; i < particles.length; i++) {
+        const p = particles[i];
+
+        p.t += dt * p.speed;
+        if (p.t >= 1) p.t -= 1;
+
+        const { x, y } = bezierPoint(p.arc, p.t);
+        p.node.setAttribute('transform', `translate(${x.toFixed(2)},${y.toFixed(2)})`);
+
+        // Fade nas pontas
+        const fade = Math.min(1, Math.min(p.t, 1 - p.t) / 0.07);
+        
+        // Partículas secundárias têm opacidade máxima reduzida
+        const maxOpacity = p.type === 'secondary' ? 0.4 : 1;
+        p.node.setAttribute('opacity', (fade * maxOpacity).toFixed(3));
+      }
+
+      requestAnimationFrame(tick);
+    }
+
+    /* ============================================================
+       6. RESIZE
+       ============================================================ */
+
+    let resizeTimer = null;
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(build, 160);
+    });
+
+    /* ============================================================
+       7. BOOTSTRAP
+       ============================================================ */
+
+    (async function init() {
+      try {
+        const topo = await fetch(
+          'https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json'
+        ).then(r => r.json());
+
+        worldFeatures = topojson.feature(topo, topo.objects.countries).features;
+
+        build();
+        prevTime = performance.now();
+        requestAnimationFrame(tick);
+
+      } catch (err) {
+        console.error(err);
+      }
+    })();
+
+  })();</script></body></html>

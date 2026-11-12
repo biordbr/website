@@ -448,12 +448,25 @@
 
   /* ---------- INNER PAGE SUBHERO ---------- */
   .subhero{
+    position:relative;
+    isolation:isolate;
+    overflow:hidden;
     background:
       radial-gradient(900px 460px at 85% -10%, var(--blue-glow), transparent 60%),
       radial-gradient(700px 420px at 0% 110%, var(--coral-glow), transparent 55%),
       var(--ink);
     color:var(--text-paper);
     padding:64px 0 56px;
+  }
+  .subhero > .wrap{position:relative;z-index:1;}
+  .hero-network-map{
+    position:absolute;z-index:0;top:0;right:0;width:min(64%,900px);height:100%;
+    border:0;opacity:.72;pointer-events:none;
+    -webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 34%);
+    mask-image:linear-gradient(90deg,transparent 0%,#000 34%);
+  }
+  @media(max-width:760px){
+    .hero-network-map{width:100%;opacity:.32;-webkit-mask-image:linear-gradient(90deg,transparent,#000 55%);mask-image:linear-gradient(90deg,transparent,#000 55%);}
   }
   .subhero .crumb{
     font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--text-paper-60);
