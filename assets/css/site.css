@@ -460,7 +460,7 @@
   }
   .subhero-layout{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center;}
   .subhero-copy{min-width:0;}
-  .world-map{position:relative;max-width:360px;justify-self:center;width:100%;aspect-ratio:1.55/1;margin:0;background:#000;border:0;}
+  .world-map{position:relative;max-width:360px;justify-self:center;width:100%;aspect-ratio:1.55/1;margin:0;background:transparent;border:0;}
   .hero-network-map{display:block;width:100%;height:100%;margin:0;padding:0;border:0;background:transparent;}
   @media(max-width:920px){
     .subhero-layout{grid-template-columns:1fr;gap:40px;}
