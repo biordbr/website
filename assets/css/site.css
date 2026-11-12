@@ -458,15 +458,12 @@
     color:var(--text-paper);
     padding:64px 0 56px;
   }
-  .subhero > .wrap{position:relative;z-index:1;}
-  .hero-network-map{
-    position:absolute;z-index:0;top:0;right:0;width:min(64%,900px);height:100%;
-    border:0;opacity:.72;pointer-events:none;
-    -webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 34%);
-    mask-image:linear-gradient(90deg,transparent 0%,#000 34%);
-  }
-  @media(max-width:760px){
-    .hero-network-map{width:100%;opacity:.32;-webkit-mask-image:linear-gradient(90deg,transparent,#000 55%);mask-image:linear-gradient(90deg,transparent,#000 55%);}
+  .subhero-layout{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(300px,.9fr);align-items:center;gap:clamp(28px,5vw,72px);}
+  .subhero-copy{min-width:0;}
+  .hero-network-map{display:block;width:100%;height:clamp(300px,34vw,430px);border:0;}
+  @media(max-width:920px){
+    .subhero-layout{grid-template-columns:1fr;gap:28px;}
+    .hero-network-map{order:-1;height:clamp(220px,48vw,340px);max-width:560px;justify-self:center;}
   }
   .subhero .crumb{
     font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--text-paper-60);
